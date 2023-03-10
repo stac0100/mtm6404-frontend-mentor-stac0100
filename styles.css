@@ -55,15 +55,6 @@ table {
     Basic Styles
 ***********************/
 
-/* font hierarchy */
-
-h1 {font-size: 32px;}
-h2 {font-size: 26px;color: var(--softOrange);}
-h3 {font-size: 20px;color: var(--off-white);}
-h4 {font-size: 18px;}
-span {font-size: 20px; color: var(--grayBlue);}
-p {font-size: 15px; color: var(--darkGray);}
-
 /* creating colour variables */
 
 :root {
@@ -78,18 +69,41 @@ p {font-size: 15px; color: var(--darkGray);}
     --darkBlue: hsl(240, 100%, 5%);
 }
 
-.new {background-color: var(--darkBlue);}
+.new {background-color: var(--darkBlue); padding-bottom: .5rem;}
+.new h2 {color: var(--softOrange); padding: 1rem;}
+.new h3 {color: var(--off-white); padding-left: 1rem; padding-bottom: .5rem;}
+.new h3:hover {color: var(--softOrange);}
+.new p {color: var(--grayBlue); padding: 0 1rem;}
+hr {color: var(--grayBlue);}
+#uppercase {text-transform: uppercase; background-color: var(--softRed); color: white; margin-bottom: 1rem;}
+.numbers span {color: var(--darkGray);}
+.flex {display: grid; grid-template-columns: 1fr 2fr; margin: .5rem;}
+.numbers {margin: 0 .5rem;}
+.info {padding-left: .5rem;}
+.info h4:hover {color: var(--softRed);}
+.hero {padding-top: 4rem;}
+#h1 {padding-top: 1rem;}
+.bright {margin: 0 1rem;}
 
-button {
-    background-color: var(--softRed);
-    color: var(--off-white);
-    text-transform: uppercase;
-}
-
+#uppercase:hover {background-color: black;}
 /***********************
     Desktop
 ***********************/
 
 @media only screen and (min-width:768px) {
+    .bright{display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;}
+    .bright img {grid-column-start: 1; grid-column-end: 3; grid-row-start: 1; grid-row-end: 2;}
+    .bright h1 {grid-row-start: 2; grid-column-start: 1; grid-column-end: 2;}
+    .bright div {grid-row-start: 2; grid-column-start: 2; grid-column-end: 3;}
+
+    .new {
+        grid-column-start: 2;
+    }
+    .numbers {
+        display: flex;
+        margin: 0 7rem;
+    }
+    
+    .container {margin: 0 8rem;}
     
 }
